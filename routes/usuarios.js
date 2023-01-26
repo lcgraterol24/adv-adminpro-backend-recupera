@@ -14,16 +14,6 @@ const router = Router();
 
 router.get( '/', validarJWT , getUsuarios );
 
-// router.get( '/', (req, res) =>{
-//     res.json({
-//         ok: true,
-//         usuarios: [{
-//             id: 123,
-//             nombre: 'Fernando'
-//         }]
-//     })
-// });
-
 router.post( '/',
     [
         check('nombre', 'El nombre es obligatorio').not().isEmpty(),
