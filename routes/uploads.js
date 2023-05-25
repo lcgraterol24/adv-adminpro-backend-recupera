@@ -10,7 +10,7 @@ const router = Router();
 
 router.use(expressfileUpload());
 
-router.put( '/:tipo/:id', validarJWT , fileUploads ); 
-router.get( '/:tipo/:foto', validarJWT , retornaImagen ); //protegemos foto con JWT
+router.put( '/:tipo/:id' , fileUploads ); 
+router.get( '/:tipo/:foto', retornaImagen ); //protegemos foto con JWT
 
 module.exports = router;
