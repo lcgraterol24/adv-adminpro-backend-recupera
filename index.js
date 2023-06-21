@@ -32,13 +32,13 @@ app.use( '/api/login', require('./routes/auth') );
 
 
 // //lo ultimo: cualquier ruta que no sea la anterior
-// app.get('*', (req, res) =>{
-//     res.sendFile( path.resolve(__dirname, 'public/index.html'))
-// })
+app.get('*', (req, res) =>{
+    res.sendFile( path.resolve(__dirname, 'public/index-backup.html'))
+})
 //lo anterior sirve en caso de que haya copiado la carpeta de dist/adminpro de mi proyecto angular 
 //para la carpeta public de aca del backend. Pero yo lo tengo el proyectos separados
 
-app.get('*', '/');
+// app.get('*', '/');
 
 app.listen( process.env.PORT, () => {
     console.log('Servidor corriendo en puerto ' + process.env.PORT );
