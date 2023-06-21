@@ -30,11 +30,12 @@ app.use( '/api/todo', require('./routes/busquedas') );
 app.use( '/api/upload', require('./routes/uploads') );
 app.use( '/api/login', require('./routes/auth') );
 
-
+//**REVISAR: NADA DE LO DE ABAJO FUNCIONA. AL PARECER DEBO TRAER TODA MI CARPETA DIST DEL PROYECTO ANGULAR/
+//           Y METERLO EN LA CARPETA PUBLIC y descomentar la linea 36
 // //lo ultimo: cualquier ruta que no sea la anterior
-app.get('*', (req, res) =>{
-    res.sendFile( path.resolve(__dirname, 'public/index-backup.html'))
-})
+// app.get('*', (req, res) =>{
+//     res.sendFile( path.resolve(__dirname, 'public/index.html'))
+// })
 //lo anterior sirve en caso de que haya copiado la carpeta de dist/adminpro de mi proyecto angular 
 //para la carpeta public de aca del backend. Pero yo lo tengo el proyectos separados
 
